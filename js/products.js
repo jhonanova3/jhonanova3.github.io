@@ -2,17 +2,15 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded",async function (e) {
-//1- Traer la lista de productos   async: asincrona significa que funciona en tiempos distintos
+//1- Traer la lista de productos   
 let promesa = await getJSONData(PRODUCTS_URL);
 let productos = promesa.data
-//await: espera a q la promesa se cumpla(a q termine)
-//getJSONData lo que hace es realizar un fetch(peticion-promesa)
-//el fetch realiza una peticion a la URL q yo le paso
+
 
 
 //2- Mostrar el listado en HTML
 let lista = document.getElementsByClassName("lista-de-productos")[0] 
-// aqui guardé mi contenedor en variable "lista", para empezar a meterle cosas adentro.
+
 for (let i = 0; i < productos.length; i++) {
   let  nombre = productos[i].name
 let descripcion = productos[i].description

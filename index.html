@@ -12,7 +12,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>E-mercado</title>
 <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
@@ -22,15 +22,16 @@
   <div class="login-page container" style="text-align: center;">
     <div class="form">
       <img src="img/login.png" width="400px">
-      <!--atributo action: define el destino de la pagina cuando se envia el formulario.-->
-      <form name="formulario" action="home.html" class="login-form">
-        <!--atributo required: obliga a llenar los campos sino no te deja enviar.-->
+      
+      <form name="formulario" class="login-form">
+        
         <label for="usuario">Usuario</label>
-        <input name="usuario" type="text" placeholder="username" required/> <br>
+        <input name="usuario" id="nombreUsuario" type="text" placeholder="username" /> <br>
         <label for="contrasena">Contraseña</label>
-        <input name="contrasena" type="password" placeholder="password" required/> <br>
-        <button type="submit" class=" btn btn-primary">Entrar</button>
+        <input name="contrasena" id="clave" type="password" placeholder="password" /> <br>
+        <button type="button" onclick="checkValue()" class=" btn btn-primary">Entrar</button>
         <p class="message">No tienes cuenta? <a href="#">Registrate</a></p>
+        
       </form>
     </div>
   </div>
@@ -38,6 +39,7 @@
   <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 </html>
