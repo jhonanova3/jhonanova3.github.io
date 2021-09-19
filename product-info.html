@@ -26,23 +26,84 @@
       <a class="py-2 d-none d-md-inline-block" id= "usuarioMenu" href="my-profile.html"></a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
+ <div class="container">
+  <h3 id="productName"></h3>
+  <hr class="my-3">
+  <dl>
+    <h3 id="productCosto"></h3>
+    <dt>Descripción</dt>
+    <dd>
+      <p id="productDescription"></p>
+    </dd>
+
+    <dt>Cantidad de productos vendidos</dt>
+    <dd>
+      <p id="productCount"></p>
+    </dd>
+
+    <dt>Criterio para incluir productos en esta categoría</dt>
+    <dd>
+      <p id="productCriteria"></p>
+    </dd>
+
+    <dt>Imágenes ilustrativas</dt>
+    <dd>
+      <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+      </div>
+    </dd>
+  </dl>
+  <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Agregar al carrito</a>
+<div id="productosRelacionados">
+
+  <h2>Productos relacionados</h2>
+</div>
+<div id="comentarios">
+  <h2>Comentarios</h2>
+</div>
+</div>
+</main>
+
+<div id="nuevosComentarios">
+<form action="">
+  <ul>
+    <li>
+      <label for="newcomment">Deja tu comentario:</label> <br>
+      <textarea id="msg" name="user_message"></textarea> <br>
+      <label for="select">Puntuación:</label> <br>
+<select name="select">
+  <option value="1">1 estrella</option>
+  <option value="2">2 estrellas</option>
+  <option value="3">3 estrellas</option>
+  <option value="4">4 estrellas</option>
+  <option value="5">5 estrellas</option>
+</select>
+      <input type="submit" name="newcomment" value="Enviar">
+    </li>
+  </ul>
+</form>
+
+</div>
+
+<footer class="text-muted">
+<div class="container">
+  <p class="float-right">
+    <a href="#">Volver arriba</a>
+  </p>
+
+  <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+  <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+</div>
+</footer>
+<div id="spinner-wrapper">
+<div class="lds-ring">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+
+  
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -51,6 +112,8 @@
       <div></div>
     </div>
   </div>
+</div>
+</body>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>

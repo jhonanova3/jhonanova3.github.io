@@ -48,7 +48,7 @@ function usuarioNav() {
 if (localStorage.getItem("usuarioSesion")===null) {
   window.location.href= "index.html"
   
-}
+} 
 
 
 //Función que se ejecuta una vez que se haya lanzado el evento de

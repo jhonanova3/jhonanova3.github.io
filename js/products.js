@@ -1,10 +1,10 @@
 const ORDER_ASC_BY_PRECIO = "Barato";
 const ORDER_DESC_BY_PRECIO = "Caro";
 const ORDER_BY_VENDIDOS = "Relevancia";
-var currentProductsArray = [];
-var currentSortCriteria = undefined;
-var minCount = undefined;
-var maxCount = undefined;
+let currentProductsArray = [];
+let currentSortCriteria = undefined;
+let minCount = undefined;
+let maxCount = undefined;
 
 function sortProducts(criteria, array){
     let result = [];
@@ -37,11 +37,11 @@ function sortProducts(criteria, array){
 
 function showProductsList(){
     
-    console.log(currentProductsArray)
+   
     let htmlContentToAppend = "";
     for(let i = 0; i < currentProductsArray.length; i++){
         let product = currentProductsArray[i];
-        console.log(product)
+        
         if (((minCount == undefined) || (minCount != undefined && parseInt(product.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))){
 
@@ -54,7 +54,7 @@ function showProductsList(){
                 
                 
                 htmlContentToAppend +=`
-                <a href="category-info.html" class="list-group-item list-group-item-action">
+                <a href="product-info.html" class="list-group-item list-group-item-action">
                     <div class="row">
                         <div class="col-3">
                             <img src="` + imagen + `" alt="` + nombre + `" class="img-thumbnail">
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showProductsList();
     });
+   
 });
 
 
