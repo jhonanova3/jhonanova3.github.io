@@ -63,11 +63,11 @@ function mostrarRelacionados(){
             let contenedor = document.getElementById("productosRelacionados")
             
             for (let i = 0; i < indiceArray.length; i++) {
-            // traigo el indice = i (1,3)
+            
                 let indiceActual = indiceArray[i]
-            //traigo el producto que corresponde al indice
+        
             let productoRelacionados = productosTodos[indiceActual]
-            // de este producto traigo nombre,precio y foto
+          
             let nombre = productoRelacionados.name
             let precio = productoRelacionados.currency + " " + productoRelacionados.cost
             let foto = productoRelacionados.imgSrc
