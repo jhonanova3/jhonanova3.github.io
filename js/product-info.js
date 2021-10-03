@@ -32,16 +32,24 @@ function showImagesGallery(array){
 
     for(let i = 0; i < array.length; i++){
         let imageSrc = array[i];
+        if (i == 0) {
+            htmlContentToAppend += `
+            <div class="carousel-item active">
+            <img src="`+imageSrc+`" class="d-block w-100" alt="...">
+          </div>
+            `
+        } else {
+            htmlContentToAppend += `
+            <div class="carousel-item">
+            <img src="`+imageSrc+`" class="d-block w-100" alt="...">
+          </div>
+            `
+            
+        }
+       
+        
 
-        htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
-        `
-
-        document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+        document.getElementById("fullCarousel").innerHTML = htmlContentToAppend;
     }
 }
 
@@ -50,12 +58,16 @@ function mostrarRelacionados(){
         if (resultObj.status === "ok")
         {
            let productosTodos = resultObj.data;
-            let indice = producto.relatedProducts;
+            let indiceArray = producto.relatedProducts;
           
             let contenedor = document.getElementById("productosRelacionados")
             
-            for (let i = 0; i < indice.length; i++) {
-            let productoRelacionados = productosTodos[indice[i]]
+            for (let i = 0; i < indiceArray.length; i++) {
+            // traigo el indice = i (1,3)
+                let indiceActual = indiceArray[i]
+            //traigo el producto que corresponde al indice
+            let productoRelacionados = productosTodos[indiceActual]
+            // de este producto traigo nombre,precio y foto
             let nombre = productoRelacionados.name
             let precio = productoRelacionados.currency + " " + productoRelacionados.cost
             let foto = productoRelacionados.imgSrc
