@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
     
 function showImagesGallery(array){
-
+2   
     let htmlContentToAppend = "";
 
     for(let i = 0; i < array.length; i++){
