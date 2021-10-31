@@ -16,6 +16,7 @@ var hideSpinner = function(){
 }
 function cerrarSesion() {
   localStorage.removeItem("usuarioSesion")
+  localStorage.removeItem("todosLosDatos")
   location.reload()
 }
 
