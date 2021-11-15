@@ -48,7 +48,7 @@ function calcularSubtotal() {
    document.getElementById("elSubtotal").innerHTML = moneda + " " + subTotal 
    calcularEnvio()
 }
-
+// subtotal,tipo de envío y costo de envío.
 function calcularEnvio() {
     let tipoEnvio = document.querySelector('input[name="tipoEnvio"]:checked').value;
     let subTotal = 0
@@ -57,7 +57,7 @@ function calcularEnvio() {
         subTotal += item.count * item.unitCost
         
     }
-    let costoEnvio = 0
+    let costoEnvio = 0  
     if (tipoEnvio == "premium") {
         costoEnvio = subTotal*0.15
     }
@@ -73,7 +73,7 @@ function calcularEnvio() {
     document.getElementById("costoEnvioText").innerHTML="$ "+ costoEnvio
     document.getElementById("costoTotalText").innerHTML="$ "+ total
 }
-
+// validaciones de campos de formulario seleccionado completo, cantidad de productos mayor a 0,todas las validaciones correctas para una compra exitosa.
 function validacionFinal(){
 let validacionCarrito = false
 let validacionPago = false
